@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DRUM KIT</title>
+        <link rel="stylesheet" href="site.css">
+    </head>
+    <body>
+        <div class="keys">
+               
+                      
+                <div data-key="65" class="key"> 
+                    <kbd>A</kbd>
+                    <span class="sound">#######</span>
+                </div>
+        
+                <div data-key="85" class="key"> 
+                        <kbd>U</kbd>
+                        <span class="sound">#######</span>
+                </div>
+                    
+                <div data-key="69" class="key"> 
+                        <kbd>E</kbd>
+                        <span class="sound">#######</span>
+                </div>
+
+                <div data-key="84" class="key"> 
+                        <kbd>T</kbd>
+                        <span class="sound">#######</span>
+                </div>
+                
+                <div data-key="79" class="key"> 
+                        <kbd>O</kbd>
+                        <span class="sound">#######</span>
+                </div>
+                
+                <div data-key="73" class="key"> 
+                        <kbd>I</kbd>
+                        <span class="sound">#######</span>
+                </div>
+
+                <div data-key="71" class="key"> 
+                        <kbd>G</kbd>
+                        <span class="sound">#######</span>
+                </div>
+
+                <div data-key="70" class="key"> 
+                        <kbd>F</kbd>
+                        <span class="sound">#######</span>
+                </div>
+
+                <div data-key="74" class="key"> 
+                        <kbd>J</kbd>
+                        <span class="sound">#######</span>
+                </div>
+           
+        </div>
+
+        <audio data-key="65" src="src/1.wav"></audio>
+        <audio data-key="85" src="src/2.wav"></audio>
+        <audio data-key="69" src="src/3.wav"></audio>
+        <audio data-key="84" src="src/4.wav"></audio>
+        <audio data-key="79" src="src/5.wav"></audio>
+        <audio data-key="73" src="src/6.wav"></audio>
+        <audio data-key="71" src="src/7.wav"></audio>
+        <audio data-key="70" src="src/8.wav"></audio>
+        <audio data-key="74" src="src/9.wav"></audio>
+
+        <script>
+                //  FIXME: script burada
+            window.addEventListener("keydown" , function(e) {
+                // console.log(e);
+                const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+                const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+                console.log(audio);
+                if(!audio) return; // fonksiyonun devam etmemesini saglio
+                audio.currentTime = 0;
+                audio.play();
+                key.classList.add("playing");
+
+                
+            });
+
+            function removeTransition(e){
+                //     console.log(e);
+                if(e.propertyName !== "transform") return; // skip it
+                console.log(e.propertyName);
+                this.classList.remove("playing");
+            }
+
+            const keys = document.querySelectorAll('.key');
+            keys.forEach(key => key.addEventListener("transitionend",removeTransition));
+
+                
+
+        </script>
+    </body>
+</html>
