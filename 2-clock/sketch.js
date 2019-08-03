@@ -1,13 +1,13 @@
 // FIXME: INITIAL VALUES
 
 let w,h;
-let size = 300;
+let size = 500;
 let space = 100;
 let yon = false;
 let bg;
 let particle;
 let parts = [];
-let thn = 15;
+let thn = 25;
 
 function touchStarted() {
   parts.push(new Particle(mouseX,mouseY));
@@ -132,7 +132,7 @@ function Particle(x, y) {
 
     var v = createVector(this.x, this.y);
     this.history.push(v); 
-    if (this.history.length > 25) {
+    if (this.history.length > 15) {
       this.history.splice(0, 1);
     }
   }
