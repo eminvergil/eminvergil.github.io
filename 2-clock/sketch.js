@@ -1,13 +1,13 @@
 // FIXME: INITIAL VALUES
 
 let w,h;
-let size = 500;
+let size = 300;
 let space = 100;
 let yon = false;
 let bg;
 let particle;
 let parts = [];
-let thn = 10;
+let thn = 15;
 
 function touchStarted() {
   parts.push(new Particle(mouseX,mouseY));
@@ -141,7 +141,7 @@ function Particle(x, y) {
     
     noFill();
     stroke("green");    
-    ellipse(this.x, this.y, 24, 24);
+    ellipse(this.x, this.y, 12, 12);
     beginShape();
     for (var i = 0; i < this.history.length; i++) {
       var pos = this.history[i];
