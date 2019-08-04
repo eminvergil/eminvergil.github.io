@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Css Variables and JS</title>
+    </head>
+
+    <body>
+        <h2>Update Css Variables with <span class="hl">JS</span></h2>
+
+        <div class="controls">
+            <label for="spacing">Spacing:</label>
+            <input type="range" name="spacing" min="10" max="200" value="10" 
+            data-sizing="px">
+
+            <label for="blur">Blur:</label>
+            <input type="range" name="blur" min="0" max="25" value="10" 
+            data-sizing="px">
+
+            <label for="base">Base Color</label>
+            <input type="color" name="base" value="#ffc600">
+
+        </div>
+
+        <img class="bg-img" src="https://images.pexels.com/photos/129830/pexels-photo-129830.jpeg">
+
+        <style>
+                :root{
+                    --base:#ffc600;
+                    --spacing:10px;
+                    --blur:10px;
+                }
+                img{
+                    padding: var(--spacing);
+                    background: var(--base);
+                    filter: blur(var(--blur));
+
+                }
+                .hl{
+                    color: var(--base);
+                }
+
+
+            /* -------------------------------- */
+                    * {
+                    box-sizing: border-box;
+                    }
+                    html {
+                    height: 100%;
+                    }
+                    .controls {
+                        margin-bottom: 50px;
+                    }
+                    body {
+                    display:block; 
+                    padding: 0px; 
+                    margin: 0px;  
+                    height: 100%;
+                    /* justify-content: center; */
+                    text-align: center;
+                    font-weight: 100;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font: bolder;
+                    font-size: 100%;
+                    background-color:darkkhaki;                    
+                    
+                    } 
+                     .bg-img{
+                        /* display: flex;
+                        padding-left: 200px; 
+                        margin: 0px;   */
+                        width: 80%;
+                        height: 80%;
+                    
+                    } 
+        </style>
+
+        <script>
+            const inputs =  document.querySelectorAll(".controls input");
+
+            function handleUpdate(){
+                const suffix = this.dataset.sizing || "";
+                document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
+                console.log(suffix);
+            }
+
+            inputs.forEach(input => input.addEventListener("change",handleUpdate));
+            inputs.forEach(input => input.addEventListener("mousemove",handleUpdate));
+
+        </script>
+
+    </body>
+</html>
