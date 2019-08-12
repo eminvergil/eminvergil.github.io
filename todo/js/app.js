@@ -4,6 +4,7 @@
 
 const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
+const hourElement = document.getElementById("hours");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
 
@@ -41,8 +42,12 @@ clear.addEventListener("click",function(){
 });
 
 // Show todays date
-const options = {weekday : "long" , month: "short" , day: "numeric"};
+const options = {weekday : "long" , month: "short" , day: "numeric" };
 const today = new Date();
+// hours 
+const options_h = {hour: "numeric",minute:"numeric"};
+
+hourElement.innerHTML = today.toLocaleTimeString("tr-TR",options_h);
 
 dateElement.innerHTML = today.toLocaleDateString("tr-TR",options);
 

@@ -1,7 +1,15 @@
 /* ------------ youtube.com/CodeExplained ------------ */
+
+html{
+    height: 100%;
+}
 body{
+    display: flex;
     padding: 0;
     margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0,0,0,0.1);
     font-family: 'Titillium Web', sans-serif;
 }
@@ -9,15 +17,15 @@ body{
 /* ------------ container ------------ */
 .container{
     padding:10px;
-    width:380px;
+    width:760px;
     margin:0 auto;
 }
 
 /* ------------ header ------------ */
 .header{
-    width: 380px;
-    height:200px;
-    background-image: url('../img/bg1.jpg');
+    width: 760px;
+    height:400px;
+    background-image: url('../img/bg2.jpg');
     background-size: 100% 200%;
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
@@ -41,16 +49,25 @@ body{
 }
 #date{
     position: absolute;
+    bottom: 40px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+}
+#hours{
+    position: absolute;
     bottom: 10px;
     left: 10px;
-    color: #FFF;
+    color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: 'Titillium Web', sans-serif;
 }
 
+
 /* ------------ content ------------ */
 .content{
-    width:380px;
+    width:760px;
     height: 350px;
     max-height:350px;
     background-color: #FFF;
@@ -64,7 +81,7 @@ body{
     margin:0;
 }
 .item{
-    width:380px;
+    width:760px;
     height: 45px;
     min-height: 45px;
     position: relative;
@@ -113,7 +130,7 @@ body{
 /* ------------ add item ------------ */
 .add-to-do{
     position: relative;
-    width: 360px;
+    width: 740px;
     height:40px;
     background-color: #FFF;
     padding: 10px;
