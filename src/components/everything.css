@@ -1,181 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --mainGray: #57546f;
+  --mainLightGray: #b9b5c3;
+  --mainPurple: #633662;
+  --mainLightPurple: #903d62;
+  --mainPink: #9e4491;
+  --mainLightPink: #d95b9a;
+  --mainWhite: #f2f2f0;
+  --mainYellow: #f3d040;
+  --mainRed: #bd515a;
+  --mainBlue: #4884d4;
+  --mainGreen: #94e092;
+  --mainDarkGreen: #1f9983;
+  --mainDark: #22636b;
+}
 
 * {
-  font-family: "Heebo", monospace, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100%;
-  min-height: 100%;
+  background-color: var(--mainDark);
   display: flex;
   flex-direction: column;
-}
-
-.everything-on-center {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 95vh;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto";
 }
 
 .container {
-  /* border: 2px solid #000; */
-  margin-top: -200px;
-  padding: 4rem;
-  padding-top: 0;
-  border-radius: 1.15rem;
-  height: 50vh;
-  /* width: 100vh; */
-}
-
-.row-ust {
   display: flex;
   flex-direction: row;
+  text-align: center;
   justify-content: center;
   align-items: center;
-}
-
-.row-ust div {
-  padding: 1rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  width: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-}
-
-.row-ust div:hover {
-  color: brown;
-}
-
-.row-ust div p {
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.ust-hr {
-  /* rotate: 90deg; */
-  border-top: 100px solid #000;
-  color: #000;
-  font-size: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  row-gap: 2rem;
-  justify-content: center;
-  align-content: center;
-}
-
-.row h1 {
-  padding-right: 7rem;
-}
-
-.row .contact {
-  padding-left: 7rem;
-}
-
-.btn-container {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.isim {
-  font-size: 50px;
-}
-
-.contact ul {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.contact p {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.col h4 {
-  width: 80%;
-}
-
-.h4-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.btn-container {
-}
-
-/* 
-SABİT DEGERLER
-SABİT DEGERLER
-SABİT DEGERLER
-SABİT DEGERLER
-SABİT DEGERLER
-SABİT DEGERLER                          SABİT DEGERLE
-                          SABİT DEGERLER
-                          SABİT DEGERLER
-                          SABİT DEGERLER
-                          SABİT DEGERLER
-                          SABİT DEGERLER */
-
-.w-75 {
-  width: 75%;
-}
-.w-25 {
-  width: 25%;
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
-h4 {
-  font-size: 1.75rem;
-}
-
-ul li {
-  list-style: none;
-}
-
-.f-3x {
-  font-size: 50px;
-  margin-right: 1rem;
-}
-
-.f-2x {
-  font-size: 25px;
-  margin-right: 1rem;
-  color: #000;
-}
-
-.f-2x:hover {
-  color: brown;
-}
-
-.align-self-bottom {
-  /* height: 200px; */
-  padding: 2rem;
-  width: 50%;
-  margin-top: auto;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  min-width: 900px !important;
+  min-height: 600px;
+  margin: 0 auto 0 auto;
 }
