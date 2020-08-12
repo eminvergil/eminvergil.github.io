@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"16l3":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),c=a("Bl7J"),o=a("Wbzz");t.default=function(e){var t=Object(o.c)("895953222").site.siteMetadata.projects.map((function(e,t){return r.a.createElement("li",{key:t},e.name)}));return r.a.createElement(c.a,{pageTitle:"Projects",pageDescription:"Learn more about my projects"},r.a.createElement("ul",null,t))}}}]);
+//# sourceMappingURL=component---src-pages-projects-js-bff44ea19863ef0d5e69.js.map
